@@ -3,7 +3,7 @@ SELECT MAX(Track),
 FROM (
 SELECT
     t.Name TrackName,
-    COUNT(t.Name) Track
+    COUNT(il.TrackId) Track
 FROM Track t 
 JOIN InvoiceLine il On il.TrackId = t.TrackId
 JOIN Invoice i On il.InvoiceId = i.InvoiceId
